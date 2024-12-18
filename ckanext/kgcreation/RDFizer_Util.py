@@ -40,7 +40,7 @@ class RDFizer_Util:
         if not output_folder:
             output_folder = config.get('ckan.storage_path', "/var/lib/ckan") + '/rdf'
 
-        self.plugin_path = '/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql'
+        self.plugin_path = '/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation'
         self.RDFizer_temp_folder = self.plugin_path + '/temp'
         self.RDFizer_config_file = self.RDFizer_temp_folder + '/RDFizer_config.ini'
         self.RDFizer_mapping_path = self.plugin_path + '/RDFizer_mappings'
