@@ -7,7 +7,7 @@ ckanext-kgcreation
    Consider including some screenshots or embedding a video!
 
 ``ckanext-kgcreation`` is a CKAN plugin that adds the ability to generate RDF triples from datasets, services, resources, and organization.
-KGCreation uses [SDM-RDFizer](https://github.com/SDM-TIB/SDM-RDFizer) as a knowledge graph creation engine.
+KGCreation uses SDM-RDFizer (https://github.com/SDM-TIB/SDM-RDFizer) as a knowledge graph creation engine.
 
 ------------
 Installation
