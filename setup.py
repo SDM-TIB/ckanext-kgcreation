@@ -24,7 +24,7 @@ setup(
 
     # The project's main homepage.
     url='https://github.com/TIB/'\
-            'ckanext-LDM_SPARQL',
+            'ckanext-kgcreation',
 
     # Author details
     author='''Brunet Mauricio''',
