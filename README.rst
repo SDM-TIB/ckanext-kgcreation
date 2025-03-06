@@ -36,18 +36,18 @@ To install ckanext-kgcreation:
    the endpoint. For ``ENDPOINT_URL``, only add the domain (i.e. http://localhost), 
    the port will be added in the code.
 
-4b. When using the Docker image for CKAN and a docker container endpoint, replace the line 40 in file ``Virtuoso_Util.py``
+5. When using the Docker image for CKAN and a docker container endpoint, replace the line 40 in file ``Virtuoso_Util.py``::
+   
+    self.virtuosoGraph = config.get("LDMSPARQL_ENDPOINT_GRAPH", os.environ.get('CKAN_KG_DOMAIN') + ':8890/')
 
-   ::self.virtuosoGraph = config.get("LDMSPARQL_ENDPOINT_GRAPH", os.environ.get('CKAN_KG_DOMAIN') + ':8890/')
+   with::
 
-   with
-
-   ::self.virtuosoGraph = config.get("LDMSPARQL_ENDPOINT_GRAPH", 'http://endpoint:8890/')
+    self.virtuosoGraph = config.get("LDMSPARQL_ENDPOINT_GRAPH", 'http://endpoint:8890/')
 
    ``endpoint`` is the variable in ``docker-compose`` that represents the endpoint.
 
 
-5. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu::
+6. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu::
 
      sudo service apache2 reload
 
