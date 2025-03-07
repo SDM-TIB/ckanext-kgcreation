@@ -9,7 +9,7 @@
 
 <#VenueMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/files/example_json.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/files/example_json.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$"
   ];

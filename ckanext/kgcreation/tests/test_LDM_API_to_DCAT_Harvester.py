@@ -1,7 +1,7 @@
-# pytest --ckan-ini=test.ini ckanext/ldm_sparql/tests/test_LDM_API_to_DCAT_Harvester.py -s
+# pytest --ckan-ini=test.ini ckanext/kgcreation/tests/test_LDM_API_to_DCAT_Harvester.py -s
 
-from ckanext.ldm_sparql.LDM_API_to_DCAT_Harvester import LDM_API_to_DCAT_Harvester
-from ckanext.ldm_sparql.RDFizer_Util import RDFizer_Util
+from ckanext.kgcreation.LDM_API_to_DCAT_Harvester import LDM_API_to_DCAT_Harvester
+from ckanext.kgcreation.RDFizer_Util import RDFizer_Util
 # from ckanext.tibimport.logic2 import LDM_DatasetImport
 # import pytest
 # from LUH_Profile_Mocks import local_organization_data, local_dataset_data, luh_api_package_list_no_results,\
@@ -130,7 +130,7 @@ def test_convert_one_dataset_to_DCAT_N3():
 
     harvester = LDM_API_to_DCAT_Harvester()
 
-    output_folder = "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/LDM_DCAT_N3"
+    output_folder = "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/LDM_DCAT_N3"
     dataset_name = "service-example"
     output_file = output_folder + '/' + dataset_name + '.nt'
 
@@ -170,7 +170,7 @@ def test_convert_one_dataset_to_DCAT_N3_using_Harvester():
 
     harvester = LDM_API_to_DCAT_Harvester()
 
-    output_folder = "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/LDM_DCAT_N3"
+    output_folder = "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/LDM_DCAT_N3"
     dataset_name = "service-example"
     output_file = output_folder + '/' + dataset_name + '.nt'
 

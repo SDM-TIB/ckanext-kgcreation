@@ -10,7 +10,7 @@ output_format: turtle
 
 [dataset1]
 name: joinCondition
-mapping: /usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/RDFizer_mappings/mapping.ttl'''
+mapping: /usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/RDFizer_mappings/mapping.ttl'''
 
 default_config_setting_mapping = '''[datasets]
 number_of_datasets: 1
@@ -24,7 +24,7 @@ output_format: turtle
 
 [dataset1]
 name: joinCondition
-mapping: /usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/RDFizer_mappings/example_mapping.ttl'''
+mapping: /usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/RDFizer_mappings/example_mapping.ttl'''
 
 default_config_setting_output_folder = '''[datasets]
 number_of_datasets: 1
@@ -38,7 +38,7 @@ output_format: turtle
 
 [dataset1]
 name: joinCondition
-mapping: /usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/RDFizer_mappings/example_mapping.ttl'''
+mapping: /usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/RDFizer_mappings/example_mapping.ttl'''
 
 default_config_changing_values = '''[datasets]
 number_of_datasets: 1
@@ -52,7 +52,7 @@ output_format: turtle
 
 [dataset1]
 name: newname
-mapping: /usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/RDFizer_mappings/mapping.ttl'''
+mapping: /usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/RDFizer_mappings/mapping.ttl'''
 
 mocked_package_show_dict = {'author': 'LDM', 'author_email': '', 'creator_user_id': '17755db4-395a-4b3b-ac09-e8e3484ca700', 'id': 'ca8c20ad-77b6-46d7-a940-1f6a351d7d0b', 'isopen': True, 'license_id': 'cc-by', 'license_title': 'Creative Commons Attribution', 'license_url': 'http://www.opendefinition.org/licenses/cc-by', 'maintainer': '', 'maintainer_email': '', 'metadata_created': '2017-11-24T13:36:15.887852', 'metadata_modified': '2022-07-26T08:17:28.709699', 'name': 'example-cad-2', 'notes': 'Example usage of CAD using Ckan View with information provided by PANGAEA.', 'num_resources': 1, 'num_tags': 0, 'organization': {'id': '54c88c71-bd87-4e73-8440-b909e4c3877b', 'name': 'fachgebiet-wissensbasierte-systeme', 'title': ' Fachgebiet Wissensbasierte Systeme', 'type': 'organization', 'description': '\r\n* Appelstraße 4 // 2. Stock\r\n* 30167 Hannover\r\n* Tel : +49 (0)511 762 19711 \r\n* https://www2.kbs.uni-hannover.de/', 'image_url': '', 'created': '2021-10-07T11:46:20.228440', 'is_organization': True, 'approval_status': 'approved', 'state': 'active'}, 'owner_org': '54c88c71-bd87-4e73-8440-b909e4c3877b', 'private': False, 'state': 'active', 'title': 'Pangaea CAD files', 'type': 'dataset', 'url': '', 'version': '', 'extras': [{'key': 'orcid', 'value': ''}, {'key': 'services_used_list', 'value': ''}], 'resources': [{'cache_last_updated': None, 'cache_url': None, 'created': '2017-11-24T13:37:06.599034', 'datastore_active': False, 'description': '', 'format': '', 'hash': '', 'id': '0ce74f0d-bf35-4627-9f69-92d5c1150dff', 'last_modified': '2017-12-01T16:50:37.896845', 'metadata_modified': None, 'mimetype': 'application/zip', 'mimetype_inner': None, 'name': 'Example .dwg file', 'package_id': 'ca8c20ad-77b6-46d7-a940-1f6a351d7d0b', 'position': 0, 'resource_type': None, 'size': 3414733, 'state': 'active', 'url': 'https://github.com/guillermobet/files/raw/master/gkg_steel_zinced.zip', 'url_type': ''}], "tags": [{
                 "display_name": "matrix",

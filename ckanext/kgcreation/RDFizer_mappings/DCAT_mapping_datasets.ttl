@@ -21,7 +21,7 @@
 
 <#DatasetMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$";
   ];
@@ -197,7 +197,7 @@ rr:predicateObjectMap [
 
 <#TemporalMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$";
   ];
@@ -221,7 +221,7 @@ rr:predicateObjectMap [
 
 <#ContactPoingVcard> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$";
   ];
@@ -256,7 +256,7 @@ rr:predicateObjectMap [
 
 <#DatasetMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.resources[*]";
   ];
@@ -275,7 +275,7 @@ rr:predicateObjectMap [
 
 <#Keywords> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.tags[*]";
   ];
@@ -295,7 +295,7 @@ rr:predicateObjectMap [
 
 <#KeywordsMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.tags[*]";
   ];
@@ -328,7 +328,7 @@ rr:predicateObjectMap [
 
 <#DistributionMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.resources[*]";
   ];
@@ -419,7 +419,7 @@ rr:predicateObjectMap [
 
 <#VOrganization> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$";
   ];
@@ -438,7 +438,7 @@ rr:predicateObjectMap [
 
 <#Author> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$";
   ];
@@ -467,7 +467,7 @@ rr:predicateObjectMap [
 
   <#ExtraAuthors2> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.extra_authors[*]";
   ];
@@ -497,7 +497,7 @@ rr:predicateObjectMap [
 
 <#Organization> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$";
   ];

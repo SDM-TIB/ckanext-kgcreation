@@ -91,7 +91,7 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points='''
         [ckan.plugins]
-        ldm_sparql=ckanext.ldm_sparql.plugin:LdmSparqlPlugin
+        kgcreation=ckanext.kgcreation.plugin:KGCreationPlugin
 
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan

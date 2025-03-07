@@ -1,7 +1,7 @@
-# pytest --ckan-ini=test.ini ckanext/ldm_sparql/tests/test_ORCID_Util.py -s
+# pytest --ckan-ini=test.ini ckanext/kgcreation/tests/test_ORCID_Util.py -s
 
-from ckanext.ldm_sparql.ORCID_Util import ORCID_Util
-from ckanext.ldm_sparql.tests.Mocks import orcid_search_strings, orcid_search_options
+from ckanext.kgcreation.ORCID_Util import ORCID_Util
+from ckanext.kgcreation.tests.Mocks import orcid_search_strings, orcid_search_options
 
 def test__get_search_options():
 

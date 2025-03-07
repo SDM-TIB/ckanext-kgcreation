@@ -1,8 +1,9 @@
+
 from ckan.common import config
 import ckan.plugins.toolkit as toolkit
-from ckanext.ldm_sparql.RDFizer_Util import RDFizer_Util
+from ckanext.kgcreation.RDFizer_Util import RDFizer_Util
 from subprocess import check_output
-#from ckanext.ldm_sparql.RDFizer.semantify import semantify
+#from ckanext.kgcreation.RDFizer.semantify import semantify
 # from rdfizer import semantify
 # import ckan.logic as logic
 # import ckan.model as model
@@ -21,7 +22,7 @@ class Virtuoso_Util:
     def __init__(self):
 
         # Plugin Configuration
-        self.plugin_path = '/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql'
+        self.plugin_path = '/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation'
         self.plugin_data_folder = config.get('ckan.storage_path', "/var/lib/ckan") 
         self.LDM_RDFfolder = config.get("LDMSPARQL_LDM_RDF_SINK_FOLDER_PATH",
                                         self.plugin_data_folder+"/rdf-sink")  # folder in LDM container+

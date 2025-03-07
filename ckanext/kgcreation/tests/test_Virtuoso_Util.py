@@ -1,7 +1,7 @@
-# pytest --ckan-ini=test.ini ckanext/ldm_sparql/tests/test_Virtuoso_Util.py -s
+# pytest --ckan-ini=test.ini ckanext/kgcreation/tests/test_Virtuoso_Util.py -s
 
-from ckanext.ldm_sparql.Virtuoso_Util import Virtuoso_Util
-from ckanext.ldm_sparql.tests.Mocks import mocked_package_show_dict
+from ckanext.kgcreation.Virtuoso_Util import Virtuoso_Util
+from ckanext.kgcreation.tests.Mocks import mocked_package_show_dict
 
 from unittest.mock import Mock, patch
 

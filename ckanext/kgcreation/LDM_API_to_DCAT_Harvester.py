@@ -1,5 +1,5 @@
 import requests, os
-from ckanext.ldm_sparql.RDFizer_Util import RDFizer_Util
+from ckanext.kgcreation.RDFizer_Util import RDFizer_Util
 
 from logging import getLogger
 log = getLogger(__name__)
@@ -21,7 +21,7 @@ class LDM_API_to_DCAT_Harvester():
         self.home_url = "https://service.tib.eu/ldmservice"
 
         # DCAT files output folder
-        self.output_folder = "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/LDM_DCAT_N3"
+        self.output_folder = "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/LDM_DCAT_N3"
 
     def get_datasets_list(self):
         '''

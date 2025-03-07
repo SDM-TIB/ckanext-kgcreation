@@ -1,13 +1,13 @@
 
 from ckan.common import config
-#from ckanext.ldm_sparql.RDFizer.semantify import semantify
+#from ckanext.kgcreation.RDFizer.semantify import semantify
 from rdfizer import semantify
 import ckan.logic as logic
 import ckan.model as model
 from ckan.plugins import toolkit
 from ckan.common import config
-from ckanext.ldm_sparql.ORCID_Util import ORCID_Util
-from ckanext.ldm_sparql.Falcon_Util import Falcon_Util
+from ckanext.kgcreation.ORCID_Util import ORCID_Util
+from ckanext.kgcreation.Falcon_Util import Falcon_Util
 
 NotFound = logic.NotFound
 NotAuthorized = logic.NotAuthorized

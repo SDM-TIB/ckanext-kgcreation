@@ -1,7 +1,7 @@
-# pytest --ckan-ini=test.ini ckanext/ldm_sparql/tests/test_Falcon_Util.py -s
+# pytest --ckan-ini=test.ini ckanext/kgcreation/tests/test_Falcon_Util.py -s
 
-from ckanext.ldm_sparql.Falcon_Util import Falcon_Util
-from ckanext.ldm_sparql.tests.Mocks import falcon1_expected_res, falcon2_expected_res
+from ckanext.kgcreation.Falcon_Util import Falcon_Util
+from ckanext.kgcreation.tests.Mocks import falcon1_expected_res, falcon2_expected_res
 
 def test_call_falcon1_API():
 

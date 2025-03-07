@@ -3,8 +3,8 @@ import click
 from ckan.model import Session
 from ckan.plugins import toolkit
 
-from ckanext.ldm_sparql.RDFizer_Util import RDFizer_Util
-from ckanext.ldm_sparql.Virtuoso_Util import Virtuoso_Util
+from ckanext.kgcreation.RDFizer_Util import RDFizer_Util
+from ckanext.kgcreation.Virtuoso_Util import Virtuoso_Util
 
 def get_commands():
     return [ldmsparql]

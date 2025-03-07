@@ -1,7 +1,7 @@
-# pytest --ckan-ini=test.ini ckanext/ldm_sparql/tests/test_RDFizer_Util.py -s
+# pytest --ckan-ini=test.ini ckanext/kgcreation/tests/test_RDFizer_Util.py -s
 
-from ckanext.ldm_sparql.RDFizer_Util import RDFizer_Util
-from ckanext.ldm_sparql.tests.Mocks import default_config_file, default_config_setting_mapping, default_config_changing_values, \
+from ckanext.kgcreation.RDFizer_Util import RDFizer_Util
+from ckanext.kgcreation.tests.Mocks import default_config_file, default_config_setting_mapping, default_config_changing_values, \
     default_config_setting_output_folder, mocked_package_show_dict, mocked_package_list_dict, mocked_package_show_service_dict, \
     parsing_formats_result
 
@@ -56,7 +56,7 @@ import os
 #
 #     return mocked_package_show_dict
 #
-# @patch('ckanext.ldm_sparql.RDFizer_Util.RDFizer_Util.get_LDM_local_dataset', side_effect=mocked_package_show)
+# @patch('ckanext.kgcreation.RDFizer_Util.RDFizer_Util.get_LDM_local_dataset', side_effect=mocked_package_show)
 # def test_search_local_dataset_found(mock_get):
 #     obj = RDFizer_Util()
 #
@@ -74,7 +74,7 @@ import os
 #
 #     return mocked_package_list_dict
 #
-# @patch('ckanext.ldm_sparql.RDFizer_Util.RDFizer_Util.get_LDM_local_datasets_list', side_effect=mocked_package_list)
+# @patch('ckanext.kgcreation.RDFizer_Util.RDFizer_Util.get_LDM_local_datasets_list', side_effect=mocked_package_list)
 # def test_get_LDM_local_datasets_list_found(mock_get):
 #     obj = RDFizer_Util()
 #
@@ -86,25 +86,25 @@ import os
 #     assert res_dict == mocked_package_list_dict
 #
 #
-# @patch('ckanext.ldm_sparql.RDFizer_Util.RDFizer_Util.get_LDM_local_dataset', side_effect=mocked_package_show)
+# @patch('ckanext.kgcreation.RDFizer_Util.RDFizer_Util.get_LDM_local_dataset', side_effect=mocked_package_show)
 # def test_write_dataset_dict_to_json_file(mock_get):
 #     obj = RDFizer_Util()
 #
 #     ds_name = "notusedid"
 #     res_dict = obj.get_LDM_local_dataset(ds_name)
 #
-#     output_file = "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/dataset.json"
+#     output_file = "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/dataset.json"
 #
 #     obj.write_dataset_dict_to_json_file(output_file, res_dict)
 #
-#     expected_file = "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/expected_dataset.json"
+#     expected_file = "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/expected_dataset.json"
 #
 #     result = filecmp.cmp(output_file, expected_file)
 #     assert result
 #
 # def test_RDFizer_example():
 #
-#     output_folder = "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output"
+#     output_folder = "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output"
 #     output_file = output_folder + '/example_csv_ttl.ttl'
 #
 #     # delete output file if exists
@@ -135,7 +135,7 @@ import os
 #
 # def test_RDFizer_example_json():
 #
-#     output_folder = "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output"
+#     output_folder = "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output"
 #     output_file = output_folder + '/example_json_nt.nt'
 #
 #     # delete output file if exists
@@ -166,7 +166,7 @@ import os
 
 def test_RDFizer_example_dataset_json():
 
-    output_folder = "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output"
+    output_folder = "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output"
     output_file = output_folder + '/example_dataset_json_nt.nt'
 
     # delete output file if exists
@@ -343,7 +343,7 @@ def test_get_DCAT_data_from():
 
 def test_copy_Dataset_RDFfile_to_folder():
 
-    output_folder = "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output"
+    output_folder = "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output"
     dest_folder = output_folder+'/test_copy'
     os.makedirs(dest_folder, exist_ok=True)
 

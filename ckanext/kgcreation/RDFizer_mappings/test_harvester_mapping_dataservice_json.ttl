@@ -15,7 +15,7 @@
 
 <#DatasetMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$";
   ];
@@ -86,7 +86,7 @@
 
 <#ContactPoingVcard> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$";
   ];
@@ -120,7 +120,7 @@
 
 <#ExtraAuthors> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.extra_authors[*]";
   ];
@@ -139,7 +139,7 @@
 
 <#KeywordsMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.tags[*]";
   ];
@@ -158,7 +158,7 @@
 
 <#distributionsMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.resources[*]";
   ];
@@ -177,7 +177,7 @@
 
 <#DistributionMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.resources[*]";
   ];
@@ -247,7 +247,7 @@
 
 <#VOrganization> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$";
   ];
@@ -266,7 +266,7 @@
 
 <#ServedDatasets> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/output/LDM_DCAT_N3/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.datasets_served_list[*]";
   ];

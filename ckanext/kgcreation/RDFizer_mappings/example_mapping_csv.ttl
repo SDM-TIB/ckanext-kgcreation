@@ -12,7 +12,7 @@
   a rr:TriplesMap;
     
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/files/sampleSource1.csv";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/files/sampleSource1.csv";
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -34,7 +34,7 @@
   a rr:TriplesMap;
     
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/tests/RDFizer_example/files/sampleSource2.csv";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/tests/RDFizer_example/files/sampleSource2.csv";
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [

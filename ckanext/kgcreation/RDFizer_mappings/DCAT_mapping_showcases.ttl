@@ -22,7 +22,7 @@
 
 <#DatasetMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$";
   ];
@@ -71,7 +71,7 @@
 
   <#DatasetMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.resources[*]";
   ];
@@ -91,7 +91,7 @@
 
 <#Keywords> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.tags[*]";
   ];
@@ -111,7 +111,7 @@
 
 <#KeywordsMappingLink> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.tags[*]";
   ];
@@ -142,7 +142,7 @@
 
 <#KeywordsMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.tags[*]";
   ];
@@ -175,7 +175,7 @@
 
 <#DistributionMapping> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.resources[*]";
   ];
@@ -246,7 +246,7 @@
 
 <#ServedDatasets> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.datasets_served_list[*]";
   ];
@@ -266,7 +266,7 @@
 
 <#Author> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$";
   ];
@@ -295,7 +295,7 @@
 
   <#ExtraAuthors2> a rr:TriplesMap;
   rml:logicalSource [
-    rml:source "/usr/lib/ckan/default/src/ckanext-LDM_SPARQL/ckanext/ldm_sparql/temp/temp.json";
+    rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
     rml:iterator "$.extra_authors[*]";
   ];

@@ -1,8 +1,8 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
-from ckanext.ldm_sparql import ldm_sparql_cli
-from ckanext.ldm_sparql.RDFizer_Util import RDFizer_Util
-from ckanext.ldm_sparql.Virtuoso_Util import Virtuoso_Util
+from ckanext.kgcreation import ldm_sparql_cli
+from ckanext.kgcreation.RDFizer_Util import RDFizer_Util
+from ckanext.kgcreation.Virtuoso_Util import Virtuoso_Util
 from ckan.model.group import Group
 from ckan.plugins.interfaces import IDomainObjectModification
 
@@ -27,7 +27,7 @@ def get_pubby_URL_for_dataset(ds_dict):
 
 
 
-class LdmSparqlPlugin(plugins.SingletonPlugin):
+class KGCreationPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IClick)
     plugins.implements(plugins.IPackageController, inherit=True)
@@ -42,8 +42,7 @@ class LdmSparqlPlugin(plugins.SingletonPlugin):
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
         toolkit.add_public_directory(config_, 'public')
-        toolkit.add_resource('fanstatic',
-            'ldm_sparql')
+        toolkit.add_resource('fanstatic', 'ldm_sparql')
 
     ## IPackageController
     def after_create(self, context, pkg_dict):
