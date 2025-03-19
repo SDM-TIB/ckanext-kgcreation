@@ -42,3 +42,4 @@ To install ckanext-kgcreation:
 
      sudo service apache2 reload
 
+.. Note:: ``ckanext-kgcreation`` assumes that the to be generated knowledge graph runs in Virtuoso.
