@@ -1,21 +1,9 @@
-=============
-ckanext-kgcreation
-=============
-
-.. Put a description of your extension here:
-   What does it do? What features does it have?
-   Consider including some screenshots or embedding a video!
+# ckanext-kgcreation
 
 ``ckanext-kgcreation`` is a CKAN plugin that adds the ability to generate RDF triples from datasets, services, resources, and organization.
 KGCreation uses SDM-RDFizer (https://github.com/SDM-TIB/SDM-RDFizer) as a knowledge graph creation engine.
 
-------------
-Installation
-------------
-
-.. Add any additional install steps to the list below.
-   For example installing any non-Python dependencies or adding any required
-   config settings.
+## Installation
 
 To install ckanext-kgcreation:
 
@@ -42,4 +30,5 @@ To install ckanext-kgcreation:
 
      sudo service apache2 reload
 
-.. Note:: ``ckanext-kgcreation`` assumes that the to be generated knowledge graph runs in Virtuoso.
+> [!NOTE]
+> ``ckanext-kgcreation`` assumes that the to be generated knowledge graph runs in Virtuoso.
