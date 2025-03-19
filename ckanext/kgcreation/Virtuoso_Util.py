@@ -38,7 +38,7 @@ class Virtuoso_Util:
         self.virtuosoUser = config.get("LDMSPARQL_ENDPOINT_USER", 'dba')
         self.virtuosoPass = config.get("LDMSPARQL_ENDPOINT_PASSWD", 'dba')
         self.virtuosoPort = config.get("LDMSPARQL_ENDPOINT_PORT", '1111')
-        self.virtuosoGraph = config.get("LDMSPARQL_ENDPOINT_GRAPH", os.environ.get('CKAN_KG_DOMAIN', 'http://ldm_kg') + ':8890/')
+        self.virtuosoGraph = config.get("LDMSPARQL_ENDPOINT_GRAPH", os.environ.get('ENDPOINT_URL', 'http://ldm_kg:8890/'))
         self.pubbyURL = config.get("LDMSPARQL_PUBBY_URL", 'http://localhost:8081/pubby/')
         self.FedQueryEngineURL = config.get("LDMSPARQL_DETRUSTY_URL", 'http://localhost:5002/sparql')
 
