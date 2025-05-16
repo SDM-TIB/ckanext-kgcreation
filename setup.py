@@ -61,7 +61,7 @@ setup(
 
     install_requires=[
         "Flask",
-        "isodate==0.6.0",
+        "isodate>=0.6.0",
         "pyparsing>=2.2.0",
         "rdflib",
         "six>=1.11.0",
@@ -69,7 +69,9 @@ setup(
         "psycopg2-binary",
         "pandas",
         "rdfizer",
-        "sparqlwrapper"
+        "sparqlwrapper",
+        "pyodbc",
+        "jsonpath-ng"
     ],
 
     # If there are data files included in your packages that need to be
