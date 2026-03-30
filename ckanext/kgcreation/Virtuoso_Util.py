@@ -228,15 +228,45 @@ class Virtuoso_Util:
                 return {}
         return res
 
+    def sub_queries_generation(self, ds_name, data):
+        triples = data.split("\n")
+        sub_group_triples = ""
+        for triple in triples:
+            if triple != "":
+                sub_group_triples += triple + "\n"
+                if triples.index(triple) == len(triples) // 2:
+                    if sub_group_triples.count("\n") >= 1400:
+                        self.sub_queries_generation(ds_name, sub_group_triples)
+                    else:
+                        query = f"INSERT " + "{\n" + sub_group_triples + "}"
+                        log.info(query)
+                        res = self.execute_sparql_sentence(query, True)
+                        if not res:
+                            log.error("ERROR inserting dataset: "+ ds_name)
+                            return res
+                    sub_group_triples = ""
+        if sub_group_triples.count("\n") >= 1400:
+            self.sub_queries_generation(ds_name, sub_group_triples)
+        else:
+            query = f"INSERT " + "{\n" + sub_group_triples + "}"
+            log.info(query)
+            res = self.execute_sparql_sentence(query, True)
+            if not res:
+                log.error("ERROR inserting dataset: "+ ds_name)
+            return res
+
     def insert_dataset_into_graph(self, ds_name):
 
         data = self.rdfizer_obj.get_DCAT_RDF_raw_data(ds_name)
 
-        sql = f"INSERT " + "{\n" + data + "}"
-        log.info(sql)
-        res = self.execute_sparql_sentence(sql, True)
-        if not res:
-            log.error("ERROR inserting dataset: "+ ds_name)
+        if data.count("\n") >= 1400:
+            res = self.sub_queries_generation(ds_name, data)
+        else:
+            sql = f"INSERT " + "{\n" + data + "}"
+            log.info(sql)
+            res = self.execute_sparql_sentence(sql, True)
+            if not res:
+                log.error("ERROR inserting dataset: "+ ds_name)
         return res
 
     def delete_dataset_from_graph(self, ds_name):
