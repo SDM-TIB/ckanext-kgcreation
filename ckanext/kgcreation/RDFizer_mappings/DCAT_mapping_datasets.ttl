@@ -16,6 +16,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @base <http://example.com/ns#>.
 
 
@@ -32,7 +33,7 @@
   ];
 
   rr:predicateObjectMap [
-    rr:predicate datacite:usesIdentifierScheme;
+    rr:predicate dcterms:source;
     rr:objectMap [
       rr:template "https://doi.org/{doi}";
     ]
@@ -128,6 +129,13 @@ rr:predicateObjectMap [
     rr:predicate dcat:landingPage;
     rr:objectMap [
       rr:template "{landing_page}"
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate dcterms:source;
+    rr:objectMap [
+      rr:template "{url}"
     ]
   ];
 
