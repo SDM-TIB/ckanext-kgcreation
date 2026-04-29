@@ -7,11 +7,11 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the relevant file
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='''ckanext-LDM_SPARQL''',
+    name='''ckanext-kgcreation''',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
@@ -23,11 +23,10 @@ setup(
     long_description_content_type='text/x-rst',
 
     # The project's main homepage.
-    url='https://github.com/TIB/'\
-            'ckanext-kgcreation',
+    url='https://github.com/TIB/ckanext-kgcreation',
 
     # Author details
-    author='''Brunet Mauricio''',
+    author='''Mauricio Brunet, Enrique Iglesias''',
     author_email='''mauricio.brunet@tib.eu''',
 
     # Choose your license
@@ -42,14 +41,12 @@ setup(
         'Development Status :: 4 - Beta',
 
         # Pick your license as you wish (should match "license" above)
-        'License :: OSI Approved :: GNU Affero General Public License v3 or'\
-        'later (AGPLv3+)',
+        'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3 Only',
     ],
-
 
     # What does your project relate to?
     keywords='''CKAN TIB LDM SPARQL KG''',
@@ -57,7 +54,7 @@ setup(
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
-        namespace_packages=['ckanext'],
+    namespace_packages=['ckanext'],
 
     install_requires=[
         "Flask",
