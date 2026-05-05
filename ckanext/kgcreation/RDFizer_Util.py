@@ -188,6 +188,7 @@ class RDFizer_Util:
                             data_instance['description'] = data_instance['description'].replace('\n', '')
                             data_instance['description'] = data_instance['description'].replace('\r', '')
                     elif field == 'tags':
+                        data_instance['data_id'] = dataset_dict["id"]
                         data_instance['tag_url'] = self._get_tag_url_from(data_instance)
                         wikidata_link = self._search_wikidata_entity_link_for_keyword(data_instance['display_name'])
                         dbpedia_link = self._search_dbpedia_entity_link_for_keyword(data_instance['display_name'])

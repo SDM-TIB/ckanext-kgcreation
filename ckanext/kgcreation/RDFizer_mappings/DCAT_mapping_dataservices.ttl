@@ -263,7 +263,7 @@
     ]
   ].
 
-<#DatasetMapping> a rr:TriplesMap;
+<#DatasetDistribution> a rr:TriplesMap;
   rml:logicalSource [
     rml:source "/usr/lib/ckan/default/src/ckanext-kgcreation/ckanext/kgcreation/temp/temp.json";
     rml:referenceFormulation ql:JSONPath;
@@ -290,7 +290,7 @@
   ];
 
   rr:subjectMap [
-    rr:template "{url}";
+    rr:template "{kg_domain}/{data_id}";
     rr:class dcat:DataService;
     
   ];

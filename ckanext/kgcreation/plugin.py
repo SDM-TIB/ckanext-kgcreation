@@ -1,6 +1,6 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
-from ckanext.kgcreation import ldm_sparql_cli
+from ckanext.kgcreation import kgcreation_cli
 from ckanext.kgcreation.RDFizer_Util import RDFizer_Util
 from ckanext.kgcreation.Virtuoso_Util import Virtuoso_Util
 from ckan.model.group import Group
@@ -36,13 +36,13 @@ class KGCreationPlugin(plugins.SingletonPlugin):
 
     ## IClick
     def get_commands(self):
-        return ldm_sparql_cli.get_commands()
+        return kgcreation_cli.get_commands()
 
     # IConfigurer
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
         toolkit.add_public_directory(config_, 'public')
-        toolkit.add_resource('fanstatic', 'ldm_sparql')
+        toolkit.add_resource('fanstatic', 'kgcreation')
 
     ## IPackageController
     def after_create(self, context, pkg_dict):
