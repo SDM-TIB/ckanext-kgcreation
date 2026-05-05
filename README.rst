@@ -11,7 +11,7 @@ To install ckanext-kgcreation:
 
      . /usr/lib/ckan/default/bin/activate
 
-2. Install the ckanext-LDM_SPARQL Python package into your virtual environment::
+2. Install the ckanext-kgcreation Python package into your virtual environment::
 
      pip install ckanext-kgcreation
 
@@ -30,5 +30,9 @@ To install ckanext-kgcreation:
 
      sudo service apache2 reload
 
+7. Set enviormental variables
+   7.1 CKAN_KG_DOMAIN: the domain for knowledge graph. For example, https://research.tib.eu/ldm.
+
 > [!NOTE]
 > ``ckanext-kgcreation`` assumes that the to be generated knowledge graph runs in Virtuoso.
+
