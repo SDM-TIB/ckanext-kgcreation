@@ -32,6 +32,7 @@ To install ckanext-kgcreation:
 
 7. Set enviormental variables
    7.1 CKAN_KG_DOMAIN: the domain for knowledge graph. For example, https://research.tib.eu/ldm.
+   7.2 SUB_KG_STORAGE: indicates if the individual triples of each dataset will stored outside the knowledge graph. This is for the representation of the metadata in multiple formats. This is optional. This can be "True" or "False". If not given, it will considered false by default.
 
 > [!NOTE]
 > ``ckanext-kgcreation`` assumes that the to be generated knowledge graph runs in Virtuoso.
