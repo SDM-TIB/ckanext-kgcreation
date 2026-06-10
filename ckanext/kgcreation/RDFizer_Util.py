@@ -472,7 +472,14 @@ class RDFizer_Util:
         for f in allowed_formats.keys():
             file_name = self.RDFizer_output_folder+'/parsed/'+dataset_name + '.' + allowed_formats[f]
             if os.path.exists(file_name):
-                os.remove(file_name)
+                if "MY_VARIABLE" in os.environ:
+                    storage = bool(os.getenv('SUB_KG_STORAGE'))
+                    if storage:
+                        os.rename(file_name,os.environ.get('CKAN_STORAGE_PATH') + "/rdf_metadata/" + dataset_name + '.' + allowed_formats[f])
+                    else:
+                        os.remove(file_name)
+                else:
+                    os.remove(file_name)
 
 
     def _search_orcid(self, author_names):

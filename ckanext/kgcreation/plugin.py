@@ -6,6 +6,9 @@ from ckanext.kgcreation.Virtuoso_Util import Virtuoso_Util
 from ckan.model.group import Group
 from ckan.plugins.interfaces import IDomainObjectModification
 
+import ckanext.kgcreation.dcat_utils as utils
+from flask import Blueprint
+
 import logging
 log = logging.getLogger(__name__)
 # HELPERS
@@ -33,6 +36,7 @@ class KGCreationPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IPackageController, inherit=True)
     plugins.implements(plugins.IOrganizationController, inherit=True)
     plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IBlueprint)
 
     ## IClick
     def get_commands(self):
@@ -108,3 +112,45 @@ class KGCreationPlugin(plugins.SingletonPlugin):
                 'ldmsparql_get_detrusty_endpoint_url': get_detrusty_endpoint_URL,
                 'ldmsparql_get_pubby_URL_for_dataset': get_pubby_URL_for_dataset,
                 }
+
+    def get_blueprint(self):
+        u'''Return a Flask Blueprint object to be registered by the app.'''
+
+        # Create Blueprint for plugin
+        blueprint = Blueprint(self.name, self.__module__,)
+        blueprint.template_folder = u'templates'
+
+        # 1. rdf/xml
+        # 2. xml
+        # 3. n3
+        # 4. ttl
+        # 5. jsonld
+        def download_dataset(_id, _format):
+            file_format = _format
+
+            if file_format == "rdf":
+                return utils.download_dataset_rdf(_id)
+            elif file_format == "xml":
+                return utils.download_dataset_xml(_id)
+            elif file_format == "n3":
+                return utils.download_dataset_n3(_id)
+            elif file_format == "ttl":
+                return utils.download_dataset_ttl(_id)
+            elif file_format == "jsonld":
+                return utils.download_dataset_jsonld(_id)
+            else:
+                # If the format doesn't match, return a clean 404 page
+                toolkit.abort(404, f"Format {file_format} is not supported.")
+
+        # TODO figure out how to handle vdataset and service
+        # Add plugin url rules to Blueprint object
+        rules = [
+            (u'/dataset/<_id>.<_format>', u'download_dataset', download_dataset),
+            (u'/vdataset/<_id>.<_format>', u'download_dataset', download_dataset),
+            (u'/service/<_id>.<_format>', u'download_dataset', download_dataset)
+        ]
+
+        for rule in rules:
+            blueprint.add_url_rule(*rule)
+
+        return blueprint
