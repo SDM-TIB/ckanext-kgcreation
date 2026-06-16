@@ -1,0 +1,22 @@
+{% ckan_extends  %}
+
+{% block secondary_content %}
+    {{ super() }}
+
+    {% block package_export %}
+        {% if h.kgcreation_show_export() %}
+            {% set url_pkg = url_for('dataset.read', id=pkg.name) %}
+
+            <section class="module module-narrow module-shallow export">
+                <h2 class="module-heading"><i class="fa fa-share-square-o"></i> {{_('Export Metadata')}}</h2>
+                <p class="module-content">
+                    <a href="{{ url_pkg }}.xml" target="_blank">RDF/XML</a>
+                    <a href="{{ url_pkg }}.n3" target="_blank">Notation3&nbsp;(N3)</a>
+                    <a href="{{ url_pkg }}.ttl" target="_blank">Turtle&nbsp;(TTL)</a>
+                    <a href="{{ url_pkg }}.jsonld" target="_blank">JSON-LD</a>
+                    <a href="{{ url_pkg }}/graph" target="_blank">Graph</a>
+                </p>
+            </section>
+        {% endif %}
+    {% endblock %}
+{% endblock %}

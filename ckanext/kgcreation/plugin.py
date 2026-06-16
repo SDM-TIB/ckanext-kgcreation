@@ -5,6 +5,7 @@ from ckanext.kgcreation.RDFizer_Util import RDFizer_Util
 from ckanext.kgcreation.Virtuoso_Util import Virtuoso_Util
 from ckan.model.group import Group
 from ckan.plugins.interfaces import IDomainObjectModification
+import os
 
 import ckanext.kgcreation.dcat_utils as utils
 from flask import Blueprint
@@ -25,6 +26,14 @@ def get_pubby_URL_for_dataset(ds_dict):
     virtuoso_util = Virtuoso_Util()
     return virtuoso_util.get_pubby_URL_for_dataset(ds_dict)
 
+
+def get_show_export():
+    """Helper function to check whether the metadata export options should be shown.
+
+    The export options are only shown if the metadata of each dataset are stored.
+    """
+    if bool(os.getenv('SUB_KG_STORAGE')):
+        return bool(os.getenv('SHOW_EXPORT'))
 
 # ***************
 
@@ -108,10 +117,12 @@ class KGCreationPlugin(plugins.SingletonPlugin):
         # Template helper function names should begin with the name of the
         # extension they belong to, to avoid clashing with functions from
         # other extensions.
-        return {'ldmsparql_get_virtuoso_endpoint_url': get_virtuoso_endpoint_URL,
-                'ldmsparql_get_detrusty_endpoint_url': get_detrusty_endpoint_URL,
-                'ldmsparql_get_pubby_URL_for_dataset': get_pubby_URL_for_dataset,
-                }
+        return {
+            'ldmsparql_get_virtuoso_endpoint_url': get_virtuoso_endpoint_URL,
+            'ldmsparql_get_detrusty_endpoint_url': get_detrusty_endpoint_URL,
+            'ldmsparql_get_pubby_URL_for_dataset': get_pubby_URL_for_dataset,
+            'kgcreation_show_export': get_show_export,
+        }
 
     def get_blueprint(self):
         u'''Return a Flask Blueprint object to be registered by the app.'''
