@@ -255,7 +255,10 @@ class RDFizer_Util:
                                     url = os.environ.get('CKAN_KG_DOMAIN') + dataset_dict['id']
                                 else:
                                     url = os.environ.get('CKAN_KG_DOMAIN') + "/" + dataset_dict['type'] + "/" + dataset_dict['id']"""
-        url = os.environ.get('CKAN_KG_DOMAIN') + dataset_dict['id']
+        if os.environ.get('CKAN_KG_DOMAIN')[len(os.environ.get('CKAN_KG_DOMAIN'))-1] == "/":
+            url = os.environ.get('CKAN_KG_DOMAIN') + dataset_dict['id']
+        else:
+            url = os.environ.get('CKAN_KG_DOMAIN') + "/" + dataset_dict['id']
         return url
 
     def _get_organization_url_from(self, dataset_dict):
