@@ -5,7 +5,9 @@
 
     {% block package_export %}
         {% if h.kgcreation_show_export() %}
-            {% set url_pkg = url_for('dataset.read', id=pkg.name, qualified=True) %}
+            {% set site_url = h.config_get('ckan.site_url', '').rstrip('/') %}
+            {% set path = url_for('dataset.read', id=pkg.name) %}
+            {% set url_pkg = site_url ~ path %}
 
             <section class="module module-narrow module-shallow export">
                 <h2 class="module-heading"><i class="fa fa-share-square-o"></i> {{_('Export Metadata')}}</h2>
