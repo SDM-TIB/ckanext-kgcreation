@@ -3,6 +3,7 @@ import ckan.plugins.toolkit as toolkit
 import flask
 import io, os
 from rdflib import Graph
+import logging
 
 CONTENT_TYPES = {
     'rdf': 'application/rdf+xml',
@@ -12,10 +13,17 @@ CONTENT_TYPES = {
     'jsonld': 'application/ld+json',
 }
 
+log = logging.getLogger(__name__)
+
 def read_content(_id):
-    with open(os.environ.get('CKAN_STORAGE_PATH') + "/rdf_metadata/" + _id + ".nt", "r") as file:
-        file_content = file.read()
-        return file_content
+    filepath = os.environ.get('CKAN_STORAGE_PATH') + "/rdf_metadata/" + _id + ".nt"
+
+    try:
+        with open(filepath, "r") as file:
+            return file.read()
+    except FileNotFoundError:
+        log.info(f"Missing Dataset file at {filepath}")
+        toolkit.abort(404, f"Dataset not found: '{_id}'.")
 
 def download_dataset_rdf (_id):
     file_content = read_content(_id)
